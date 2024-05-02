@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Container for the entire webpage -->
+    <div class="container">
+        <!-- Image representing the URL Shortener -->
+        <img src="image.png" alt="Description of the image">
+        <h1>URL Shortener</h1> 
+        <!-- Box for encoding long URLs -->
+        <div class="box">
+            <h2>Encode URL</h2>
+            <input type="text" id="longUrl" placeholder="Enter long URL">
+            <!-- Button to trigger the URL shortening process -->
+            <button onclick="shortenURL()">Shorten</button>
+            <p>Shortened URL:</p>
+            <div id="shortenedURL" class="shortened-url"></div>
+        </div>
+        <!-- Box for decoding shortened URLs -->
+        <div class="box">
+            <h2>Decode URL</h2>
+            <input type="text" id="shortUrl" placeholder="Enter shortened URL">
+            <!-- Button to trigger the URL decoding process -->
+            <button onclick="decodeURL()">Decode & Display</button>
+            <p>Decoded URL:</p>
+            <div id="decodedURL" class="decoded-url"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
