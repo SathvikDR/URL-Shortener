@@ -3,16 +3,18 @@ const urlDatabase = new Map();
 let counter = 0;
 // Function to generate a unique and collision-resistant short code
 function generateShortCode() {
-    const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    const randomNumber = Math.floor(Math.random() * 100000);
-    const timestamp = Date.now();
-  
-    // Combine the random number and timestamp to create a unique code
-    let code = randomNumber.toString() + timestamp.toString();
-    code = code.slice(-6);
-  
-    return code;
+  const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const codeLength = 6; // Define the length of the short code
+  let code = '';
+
+  for (let i = 0; i < codeLength; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      code += characters[randomIndex];
   }
+
+  return code;
+}
+
   
 
 // Function to shorten a long URL
